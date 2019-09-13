@@ -23,11 +23,11 @@ if __name__ == "__main__":
   t.speed(0)
 
   tamanho = 240
-  n = 4
 
   t.up()
   t.down()
   t.pensize(2)
+
 
   for i in range(3):
     koch(t, 3, tamanho)
