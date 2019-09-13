@@ -1,5 +1,4 @@
 #!/usr/bin/env python3 
-
 x = 5
 y = 3
 
@@ -10,4 +9,4 @@ total = 0
 for _ in range(x):
     total = produto(y, total)
 
-print(total)
+print(f'{x} * {y} = {total}')
