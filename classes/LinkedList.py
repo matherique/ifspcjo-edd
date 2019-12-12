@@ -95,17 +95,17 @@ class LinkedList:
 
     # Verifica se um item esta armazenado na lista
     def search(self, item):
-       # Aponta o pointeiro auxiliar para o inicio da listaa
-       temp = self.inicio
+        # Aponta o pointeiro auxiliar para o inicio da listaa
+        temp = self.inicio
 
-       # Loop para percorrer os nós da lista
-       while temp != None:
-           # Encontrou o item
-           if temp.item == item:
-               return True
+        # Loop para percorrer os nós da lista
+        while temp != None:
+            # Encontrou o item
+            if temp.item == item:
+                return True
 
-           # Avança para o proximo nó
-           temp = temp.proximo
+            # Avança para o proximo nó
+            temp = temp.proximo
 
         # Não encontrou o item
         return False
@@ -135,7 +135,7 @@ class LinkedList:
     # Verifica se uma lista esta vazia
     def is_empty(self, item):
         # Verifica para onde o inicio da lista aponta
-        return self.inicio is None:
+        return self.inicio is None
     
     # Remove o nó armazenado na primeira posicao da lista
     def remove_first(self):
@@ -186,10 +186,41 @@ class LinkedList:
 
     # Remove um nó contendo um determinado item
     def remove_node(self):
-        pass
+        # Aponta o ponteiro auxiliar para o inicio da lista
+        temp = self.inicio
 
-    # Remove um Nó armazenado em determinada
-    # posição da lista
+        # Verifica se o item a ser desenvolvido esta no inicio da lista
+        if temp is not None:
+            if temp.item == item:
+                # Atualiza os ponteiros
+                self.inicio = temp.proximo
+                # Remove o ponteiro auxiliar 
+                temp = None
+                # Retorna, informando que o nó foi removido
+        
+        # Anterior, para poder realizar a alteracao dos ponteiros
+        while temp is not None:
+            if temp.item == item:
+                break
+
+            anterior = temp
+            temp = temp.proximo
+
+        # Se o item não foi encontrado, returnoa Falso
+        if temp == None:
+            return False
+
+        # Caso contrario, atualiza os ponteiros, o que ira remover o 
+        # nó amazenado na lista
+        anterior.proximo = temp.proximo
+        
+        # Remove o ponteiro auxilar 
+        temp = None
+
+        # Retorna, informando que o nó foi removido
+        return True
+
+    # Remove um Nó armazenado em determinada posição da lista
     def remove_position(self, position):
         # Verifica se a lista está vazia
         if self.inicio == None:
