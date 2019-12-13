@@ -5,7 +5,7 @@ class Queue:
     # Utiliza uma lista para armazenar os elementos na Fila
     # Cada Fila pode armazenar um determinado número de elementos
     def __init__(self, tamanho):
-        self.itenss = []
+        self.itens = []
         self.__tamanho = tamanho
     
     # Retorna o número de elementos da Fila
