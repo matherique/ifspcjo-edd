@@ -1,12 +1,12 @@
 class Stack:
     # Previne a adição dinâmica de atributos
-    __slots__ = ['itens', 'tamanho']
+    __slots__ = ['itens', '__tamanho']
 
     # Utiliza uma lista para armazenar os elementos na Pilha
     # Cada Pilha pode armazenar um determinado número de elementos
     def __init__(self, tamanho):
         self.itens = []
-        self.__tamanho = 'tamanho'
+        self.__tamanho = tamanho
 
     # Retorna o número de elementos da Pilha
     def size(self):
